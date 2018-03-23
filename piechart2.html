@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", 
+	exportEnabled: true,
+	animationEnabled: true,
+	title: {
+		text: "Frequent Number of Incidents in Neighborhoods/Districts"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 25,
+		toolTipContent: "<b>{label}</b>: {y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabelFontSize: 12,
+		indexLabel: "{label} - {y}%",
+		dataPoints: [
+			{ y: 13.5, label: "Hayes Valley/Tenderloin/North of Market" },
+			{ y: 11.5, label: "South of Market" },
+			{ y: 8.0, label: "Inner Mission/Bernal Heights" },
+			{ y: 7.9, label: "Polk/Russian Hill (Nob Hill)" },
+			{ y: 5.7, label: "Financial District" },
+			{ y: 5.1, label: "Bayview-Hunters Point" },
+            { y: 4.5, label: "Ingelside-Excelsior/Crocker-Amazon" },
+            { y: 4.4, label: "Western Addition/Japantown" },
+            { y: 4.0, label: "Haight-Ashbury" },
+            { y: 3.9, label: "Potrero Hill" },
+            { y: 3.8, label: "Castro/Noe Valley" },
+            { y: 3.7, label: "North Beach/Chinatown" },
+			{ y: 24.0, label: "Others" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 290px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
