@@ -16,7 +16,7 @@ Capital One Software Engineer Summer Summit Challenge. This challenge gave us pu
 
 ## Build
 
-**Data Visualization:** Canvas.js
+**Data Visualization:** Canvas.js, MapBox
 1. Pie Charts
 
       a. Number of incidents for each of the Neighborhoods/Districts.
