@@ -27,7 +27,12 @@ Capital One Software Engineer Summer Summit Challenge. This challenge gave us pu
       
       a. Average dispatch time for each call type.
       
-      b. 
+      b. Number of incidents per unit type dispatched.
+
+3. Map
+      
+      a. Top 3 call types in different colors with all others as yellow.
+      
       
 **Data Computation:** Javascript, Google Maps
 Using the user's inputted address and time, a prediction was made of the call type and also the type of dispatch. Using the 5 closest points in terms of distance and time, the call type and unit type were outputted. 
