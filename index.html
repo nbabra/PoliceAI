@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="address.js"></script>
+  <script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAjOgVeFpjicjq8SQac4z3BbFTXPg-5fdg&callback=initMap"></script>
+
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -160,6 +163,16 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
+  #myProgress {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+  #myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #f4511e;
+}
   @keyframes slide {
     0% {
       opacity: 0;
@@ -209,34 +222,31 @@
       </button>
       <a class="navbar-brand" href="#myPage">SFPD Incident Statistics</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar"> 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#map">MAP</a></li>
-        <li><a href="#about">PIE CHART</a></li>
-        <li><a href="#services">BAR CHART</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#future">PREPARING FOR THE FUTURE</a></li>
+        <li><a href="#dispatch">DISPATCH TIMES</a></li>
+        <li><a href="#prediction">PREDICTION TOOL</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<!-- Map Section -->
 <div id="map">
   <div class="map">
-  <iframe src="maps.html"width="100%" height= "700" ></iframe>
+  <iframe src="maps.html"width="100%" height= "700" ></iframe> 
     </div>
 </div>
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
+<!-- Container (Pie Chart and Text Section) -->
+<div id="future" class="container-fluid">
   <div class="row">
     <h2 align="center">Preparing for the Future</h2>
         <div class="col-sm-8"></div>
             <div class="row text-center slideanim">
-
-                <h4 align="center">Hayes Valley/Tenderloin/North of Market (94102), Polk/Russian Hill (94109), and Inner Mission/Bernal Heights (94110) saw the greatest increase in dispatch calls. Medical Assistance was the greatest type of incident in these areas. Greater ambulance services in these areas would aid the increase of these types of calls, especially in the Tenderloin area, which is in between the other two areas.</h4><br>
+                <h4 align="center">Hayes Valley/Tenderloin/North of Market (94102), Polk/Russian Hill (94109), and Inner Mission/Bernal Heights (94110) saw the greatest increase in dispatch calls. Medical Assistance was the greatest type of incident in these areas. Greater ambulance services in these areas would mitigate the increase of these types of calls, especially in the Tenderloin area, which is in between the other two areas.</h4><br> 
                     <div>
-                    <p align="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            
-          
           </div>
         </div>
         <h2 align="center">Incident Breakdown</h2>
@@ -263,7 +273,7 @@
         <h4><span><i><font size =3>The majority of incidents reported to the SFPD are medical</font></i></span></h4>
       </div>
       <div class="item">
-        <h4><span><i><font size =3>Check out the heat map for incident concentrations!</font></i></span></h4>
+        <h4><span><i><font size =3>Click the markers on the map for more information!</font></i></span></h4>
       </div>
     
       
@@ -280,42 +290,46 @@
     </div>
   </div>
 
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>BAR CHART</h2>
-    <div class="col-sm-5">
-      <iframe src="barchart.html"width=1300 height=500px padding="100"align="center"frameBorder="0"scrolling="no"></iframe>
-    </div>
-    </div>
-  
-  
-
-   
-
-
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
+<!-- Container (Bar Chart Section) -->
+<div id="dispatch" class="container-fluid text-center">
+  <h2>DISPATCH TIMES</h2>
+    <div class="col-sm-14">
+      <div class="row text-center slideanim">
+        <h4 align= center> Train / Rail Incidents and Structure Fires took the longest to dispatch, which is probably due to the fleet needed to combat the issue at hand. St. Francis Wood/Miraloma/West Portal (94127), Parkside/Forest Hill (94116), and Rincon Hill in the Financial District (94105) had the longest dispatch times. This is due to high levels of traffic making it difficult for law enforcement and medical personnel from going to these areas. Traffic could be diverted from these areas by building more roads or increasing presence in these areas through police stations or ambulance docks.</h4>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <iframe src="barchart.html"width=100% height=800 padding="100"align="center"frameBorder="0"scrolling="no"margin =0 padding=0></iframe>
+    </div>
+    </div>
+  
+
+<!-- Container (Prediction Section) -->
+<div id="prediction" class="container-fluid bg-grey">
+  <h2 class="text-center">PREDICTION TOOL</h2>
+    <!-- Text Boxes -->
+    <div class="col-sm-12 slideanim">
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <input class="form-control" id="datetime" name="datetime" placeholder="Time i.e. 2018/01/24 17:36:16" type="text" required width = 100%>
+        </div>
+        <div class="col-sm-12 form-group">
+          <input class="form-control" id="address" name="address" placeholder="Address" type="text" required>
         </div>
       </div>
+      <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
+        
+        <br>
+  
+        <div class="row">
+            <div class="col-sm-12 slideanim">
+            <div class="col-sm-12 form-group">
+              <p>Call Type and Type of Dispatch: </p>
+              <p id = "response"></p>
+              </div>
+              <button onclick="" id="submit"class="btn btn-default pull-right" type="submit">Submit</button>
+            </div>
+        </div>
     </div>
   </div>
 </div>
@@ -338,7 +352,7 @@ $(document).ready(function(){
       // Store hash
       var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
+      // smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top

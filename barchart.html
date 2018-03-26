@@ -8,7 +8,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	
 	title:{
-		text:"Fortune 500 Companies by Country"
+		text:"SFPD Time of Dispatch Per Incident Type"
 	},
 	axisX:{
 		interval: 1
@@ -16,7 +16,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	axisY2:{
 		interlacedColor: "rgba(1,77,101,.2)",
 		gridColor: "rgba(1,77,101,.1)",
-		title: "Number of Companies"
+		title: "Time in Minutes"
 	},
 	data: [{
 		type: "bar",
@@ -24,24 +24,23 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		axisYType: "secondary",
 		color: "#014D65",
 		dataPoints: [
-			{ y: 3, label: "Sweden" },
-			{ y: 7, label: "Taiwan" },
-			{ y: 5, label: "Russia" },
-			{ y: 9, label: "Spain" },
-			{ y: 7, label: "Brazil" },
-			{ y: 7, label: "India" },
-			{ y: 9, label: "Italy" },
-			{ y: 8, label: "Australia" },
-			{ y: 11, label: "Canada" },
-			{ y: 15, label: "South Korea" },
-			{ y: 12, label: "Netherlands" },
-			{ y: 15, label: "Switzerland" },
-			{ y: 25, label: "Britain" },
-			{ y: 28, label: "Germany" },
-			{ y: 29, label: "France" },
-			{ y: 52, label: "Japan" },
-			{ y: 103, label: "China" },
-			{ y: 134, label: "US" }
+			{ y: 0.5416752, label: "Medical Incident" },
+			{ y: 1.9347828, label: "Elevator / Escalator Rescue" },
+			{ y: 2.2574142, label: "Alarms" },
+			{ y: 2.2744212, label: "Outside Fire" },
+			{ y: 2.2945122, label: "Traffic Collision" },
+			{ y: 2.3690478, label: "Electrical Hazard" },
+			{ y: 2.4903102, label: "Gas Leak (Natural and LP Gases" },
+			{ y: 2.5616664, label: "Fuel Spill" },
+			{ y: 2.8737036, label: "Vehicle Fire" },
+			{ y: 3.5651514, label: "Odor (Strange / Unknown)" },
+			{ y: 3.5988888, label: "Smoke Investigation (Outside)" },
+			{ y: 3.775194, label: "Other" },
+			{ y: 4.0666668, label: "HazMat" },
+			{ y: 4.5438594, label: "Citizen Assist / Service Call" },
+			{ y: 5.0709876, label: "Water Rescue" },
+			{ y: 34.4844348, label: "Structure Fire" },
+			{ y: 306.8090904, label: "Train / Rail Incident" }
 		]
 	}]
 });
