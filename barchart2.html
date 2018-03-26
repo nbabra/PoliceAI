@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"SFPD Number of Incidents to its Corresponding Unit Type"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Number of Incidents"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 11, label: "Investigation" },
+			{ y: 33, label: "Support" },
+			{ y: 168, label: "Rescue Squad" },
+			{ y: 272, label: "Rescue Captain" },
+			{ y: 726, label: "Chief" },
+			{ y: 981, label: "Truck" },
+			{ y: 1154, label: "Private" },
+			{ y: 3066, label: "Medic" },
+			{ y: 3589, label: "Engine" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

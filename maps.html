@@ -20,12 +20,11 @@
       style: 'mapbox://styles/nav1998/cjf1ljswl10ui2so505o4v7ib', //hosted style id
       center: [-122.431297,37.773972], // starting position
       zoom: 11.5 // starting zoom
-      
   });
   map.scrollZoom.disable();
   map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['fire-czm6xw','medical-1dnaaj','alarms-2tdx9u'] 
+    layers: ['fire1234','medical1234','alarms1234','others1234'] 
   });
 
   if (!features.length) {
@@ -36,15 +35,17 @@
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
 
     .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + 'Call Type' + '</h3><p>' + feature.properties.call_type + '</p>')
+    .setHTML('<h3>' + 'Call Type:' + '</h3><p>' + feature.properties.call_type + '</p><h3>' + 'Unit Type:' + '</h3><p>' + feature.properties.unit_type)
     .setLngLat(feature.geometry.coordinates)
     .addTo(map);
     map.flyTo({center: features[0].geometry.coordinates});
 });
-map.on('mousemove', function(e){
-    var features = map.queryRenderedFeatures(e.point, { layers: ['fire-czm6xw','medical-1dnaaj','alarms-2tdx9u'] })
+map.on('mousemove', function(e){ //
+    var features = map.queryRenderedFeatures(e.point, { layers: ['fire1234','medical1234','alarms1234','others1234'] })
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
  })
+
+ 
   </script>
   </body>
   </html>

@@ -80,7 +80,7 @@ function getClose(latitude,longitude) {
     }
 
     console.log(close);
-    
+
     for (i=0; i<5; i++) {
         close[i].time = Math.abs(timeInput - close[i].time); //finding the closest time by difference
     }
@@ -93,7 +93,7 @@ function getClose(latitude,longitude) {
         
     }
 
-    for (i = 0; i < finalSet.length; i++) {
+    for (i = 0; i < finalSet.length; i++) { // cross reference the row id with the row id in the dataset and find the unit and call type
         if (close[0].row_id === finalSet[i].row_id) {
             call.call = finalSet[i].call_type;
             unit.unit = finalSet[i].unit_type;
@@ -103,7 +103,7 @@ function getClose(latitude,longitude) {
 
     
 }
-function readJson(file, callback) {
+function readJson(file, callback) { //reading json file
     var pred = new XMLHttpRequest();
     pred.overrideMimeType("application/json");
     pred.open("GET", file, false);
