@@ -39,7 +39,7 @@ Using the user's inputted address and time, a prediction was made of the call ty
 
 **Data Extraction:** Python, Pandas, NumPy
 
-**Front End:** Bootstrap, MapBox
+**Front End:** HTML, CSS, JavaScript, Bootstrap, MapBox
 
 ## Computation 
 
