@@ -1,5 +1,5 @@
 # Capital-One-SFPD
-https://sfpd-challenge.surge.sh
+https://police-ai.surge.sh
 
 Capital One Software Engineer Summer Summit Challenge. This challenge gave us public information law enforcement statistics in San Francisco. Our goal was to create a web app which allows the data to be visualized in a creative way and also determine the type of dispatch from a user inputted address and time.
 
