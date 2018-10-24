@@ -1,6 +1,7 @@
 <!DOCTYPE html>
   <html>
   <head>
+<<<<<<< HEAD
         <meta charset='utf-8' />
         <title>MapBox</title>
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -10,11 +11,22 @@
             body { margin:0; padding:0; }
             #map { position:absolute; top:0; bottom:0; width:100%; }
         </style>
+=======
+      <meta charset='utf-8' />
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+      <style>
+          body { margin:0; padding:0; }
+          #map { position:absolute; top:0; bottom:0; width:100%; }
+      </style>
+>>>>>>> 1b8b75060d8e1861bbcfc4c5040787eb35301ac2
   </head>
   <body>
   
   <div id='map'></div>
   <script>
+<<<<<<< HEAD
     mapboxgl.accessToken = 'pk.eyJ1IjoibmF2MTk5OCIsImEiOiJjamYwNjgxdXowZ3B4MzRudnN0MjdubHg4In0.VclfBoXzh_aB5kNclvhI2w';
     const map = new mapboxgl.Map({
     container: 'map',
@@ -22,6 +34,15 @@
     center: [-122.448987, 37.774919],
     zoom: 11.49
     });
+=======
+  mapboxgl.accessToken = 'pk.eyJ1IjoibmF2MTk5OCIsImEiOiJjamYwNjgxdXowZ3B4MzRudnN0MjdubHg4In0.VclfBoXzh_aB5kNclvhI2w';
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/nav1998/cjf1ljswl10ui2so505o4v7ib', //hosted style id
+      center: [-122.431297,37.773972], // starting position
+      zoom: 11.5 // starting zoom
+  });
+>>>>>>> 1b8b75060d8e1861bbcfc4c5040787eb35301ac2
   map.scrollZoom.disable();
   map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
@@ -42,7 +63,11 @@
     map.flyTo({center: features[0].geometry.coordinates});
 });
 map.on('mousemove', function(e){ //
+<<<<<<< HEAD
     var features = map.queryRenderedFeatures(e.point, { layers: ['mapdata','fire1234','medical1234','alarms1234','others1234'] })
+=======
+    var features = map.queryRenderedFeatures(e.point, { layers: ['fire1234','medical1234','alarms1234','others1234'] })
+>>>>>>> 1b8b75060d8e1861bbcfc4c5040787eb35301ac2
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
  })
 
