@@ -147,5 +147,4 @@ function move() {
             elem.style.width = width + '%'; 
         }
     }
-}
-
+};
