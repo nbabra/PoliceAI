@@ -1,6 +1,3 @@
-
-# Capital-One-SFPD
-
 # Police AI
 
 https://policeAI.surge.sh
