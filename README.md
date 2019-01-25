@@ -1,4 +1,4 @@
-# Police AI
+# Police AI ![Languages](https://img.shields.io/github/languages/count/nbabra/PoliceAI.svg)
 
 https://policeAI.surge.sh
 
